@@ -48,7 +48,7 @@ const SignUpForm = () => {
                     onError: (error) => {
                         if (error.error.code === "USER_ALREADY_EXISTS") {
                             toast.error("Email já está em uso");
-                            form.setError("email", { message: "Email já está em uso" });
+                            return form.setError("email", { message: "Email já está em uso" });
                         } else {
                             toast.error(error.error.message);
                             
