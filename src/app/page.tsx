@@ -1,9 +1,9 @@
-import { desc } from "drizzle-orm"
+import { desc } from "drizzle-orm";
 import Image from "next/image";
 
 import CategorySelector from "@/components/ui/common/category-selector";
 import Footer from "@/components/ui/common/footer";
-import { Header } from "@/components/ui/common/header"
+import { Header } from "@/components/ui/common/header";
 import ProductList from "@/components/ui/common/product-list";
 import { db } from "@/db";
 import { productTable } from "@/db/schema";
@@ -21,10 +21,11 @@ const Home = async () => {
     },
   });
   const categories = await db.query.categoryTable.findMany({});
+
   return (
     <>
-    <Header />
-    <div className="space-y-6">
+      <Header />
+      <div className="space-y-6">
         <div className="px-5">
           <Image
             src="/banner-01.png"
@@ -52,9 +53,12 @@ const Home = async () => {
             className="h-auto w-full"
           />
         </div>
+
         <ProductList products={newlyCreatedProducts} title="Novos produtos" />
         <Footer />
       </div>
-  </>
+    </>
   );
-}
+};
+
+export default Home;

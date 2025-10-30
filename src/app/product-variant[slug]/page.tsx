@@ -2,9 +2,8 @@ import { eq } from "drizzle-orm";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-import QuantitySelector from "@/app/product-variant/[slug]/components/quantity-selector";
-import VariantSelector from "@/app/product-variant/[slug]/components/variant-selector";
-import { Button } from "@/components/ui/button";
+import ProductActions from "@/app/product-variant[slug]/[slug]/components/product-actions";
+import VariantSelector from "@/app/product-variant[slug]/[slug]/components/variant-selector";
 import Footer from "@/components/ui/common/footer";
 import { Header } from "@/components/ui/common/header";
 import ProductList from "@/components/ui/common/product-list";
@@ -70,18 +69,7 @@ const ProductVariantPage = async ({ params }: ProductVariantPageProps) => {
           </h3>
         </div>
 
-        <div className="px-5">
-          <QuantitySelector />
-        </div>
-        <div className="flex flex-col space-y-4 px-5">
-          {/* BOTÕES */}
-          <Button className="rounded-full" size="lg" variant="outline">
-            Adicionar à sacola
-          </Button>
-          <Button className="rounded-full" size="lg">
-            Comprar agora
-          </Button>
-        </div>
+        <ProductActions productVariantId={productVariant.id} />
 
         <div className="px-5">
           <p className="text-shadow-amber-600">
