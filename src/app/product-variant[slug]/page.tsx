@@ -4,9 +4,9 @@ import { notFound } from "next/navigation";
 
 import ProductActions from "@/app/product-variant[slug]/[slug]/components/product-actions";
 import VariantSelector from "@/app/product-variant[slug]/[slug]/components/variant-selector";
-import Footer from "@/components/ui/common/footer";
-import { Header } from "@/components/ui/common/header";
-import ProductList from "@/components/ui/common/product-list";
+import Footer from "@/components/common/footer";
+import { Header } from "@/components/common/header";
+import ProductList from "@/components/common/product-list";
 import { db } from "@/db";
 import { productTable, productVariantTable } from "@/db/schema";
 import { formatCentsToBRL } from "@/helpers/money";
