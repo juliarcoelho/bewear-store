@@ -2,8 +2,8 @@ import { eq } from "drizzle-orm";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-import ProductActions from "@/app/product-variant[slug]/[slug]/components/product-actions";
-import VariantSelector from "@/app/product-variant[slug]/[slug]/components/variant-selector";
+import ProductActions from "@/app/product-variant/[slug]/components/product-actions";
+import VariantSelector from "@/app/product-variant/[slug]/components/variant-selector";
 import Footer from "@/components/common/footer";
 import { Header } from "@/components/common/header";
 import ProductList from "@/components/common/product-list";
